@@ -25,7 +25,7 @@ class UserVk:
     def get_profile_photos(self):
         URL = 'https://api.vk.com/method/photos.get'
         res = requests.get(URL, params=self.get_params())
-        photos = res.json()#['response']['items']
+        photos = res.json()['response']['items']
         return photos
 
 def top_three_photos(id, token=TOKEN, offset=0):

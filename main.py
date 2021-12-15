@@ -66,7 +66,7 @@ for event in longpoll.listen():
             # Проверяем есть ли найденный пользователь в базе данных
             if (link,) in get_all_domains():
                 (get_user_result(request, link))
-            get_result(link, request)
+            get_result(link)
             get_user_result(request, link)
             write_msg(event.user_id, link)
             for photo in top_three_photos(str(single['id'])):

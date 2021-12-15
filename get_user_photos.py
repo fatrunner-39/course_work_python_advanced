@@ -25,7 +25,7 @@ class UserVk:
     def get_profile_photos(self):
         URL = 'https://api.vk.com/method/photos.get'
         res = requests.get(URL, params=self.get_params())
-        photos = res.json()['response']['items']
+        photos = res.json()#['response']['items']
         return photos
 
 def top_three_photos(id, token=TOKEN, offset=0):
@@ -33,19 +33,19 @@ def top_three_photos(id, token=TOKEN, offset=0):
     while True:
         api_vk = UserVk(id, token, offset)
         photos = api_vk.get_profile_photos()
-        all_photos += photos
+        # pprint(photos)
+        all_photos += photos['response']['items']
         if len(photos) < 200:
             break
         offset += 200
 
-    top_three = sorted(all_photos, key=lambda k: k['likes']['count'] + k['comments']['count'],
-                       reverse=True)
+    top_three = sorted(all_photos, key=lambda k: k['likes']['count'], reverse=True)
 
     return top_three[:3]
 
 if __name__ == '__main__':
     # for photo in top_three_photos():
     #     print(photo['sizes'][-1]['url'])
-    # pprint(top_three_photos())
-    user_vk = UserVk()
+    pprint(top_three_photos('62486308'))
+    # user_vk = UserVk('62486308')
     # pprint(user_vk.get_profile_photos())

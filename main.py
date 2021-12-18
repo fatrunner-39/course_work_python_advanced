@@ -69,7 +69,6 @@ for event in longpoll.listen():
                 write_msg(event.user_id, link)
                 for photo in top_three_photos(str(single['id'])):
                     ph = photo['sizes'][-1]['url']  # Получаем фото
-                    get_photo(ph)
                     get_result_photo(link, ph)
                     write_msg(event.user_id, ph)
 

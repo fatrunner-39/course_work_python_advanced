@@ -10,7 +10,7 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 
 import random
 
-token = '6ebaec931051e22d4e358238e1b9d4e867b14c47b78563bc719b0bbdaadd35fc0a286190cf5b10faa6f8a'
+token = ''
 
 vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)

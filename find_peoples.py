@@ -11,7 +11,7 @@ class VkFinder:
 
     def __init__(self,
                  hometown, sex, age_from, age_to,
-                 token='3e8295534904e73c2cd31f703496c0057df98325308d26189cce11c639dc471af27eae25c8fd2b7dbbc8d'):
+                 token=''):
         self.token = token,
         self.hometown = hometown,
         if sex == 1:

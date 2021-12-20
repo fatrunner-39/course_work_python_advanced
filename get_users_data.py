@@ -6,7 +6,7 @@ from pprint import pprint
 
 class ApiVk:
 
-    def __init__(self, id=None, token='6ebaec931051e22d4e358238e1b9d4e867b14c47b78563bc719b0bbdaadd35fc0a286190cf5b10faa6f8a'):
+    def __init__(self, id=None, token=''):
         self.id = id,
         self.token = token
 

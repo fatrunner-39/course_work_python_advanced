@@ -3,11 +3,11 @@ import json
 from pprint import pprint
 import os
 
-TOKEN = ''
+TOKEN = 'b502a1f3e92bcfc377ad82c935423f60db3777fb28e78c644e87db75d8fc3990ee240f3dd1962b62fb5c7'
 
 class UserVk:
     def __init__(self, id=None,
-                 token='',
+                 token='b502a1f3e92bcfc377ad82c935423f60db3777fb28e78c644e87db75d8fc3990ee240f3dd1962b62fb5c7',
                  offset=0):
         self.id = id,
         self.token = token,

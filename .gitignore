@@ -1,6 +1,7 @@
 main_copy.py
 tokens.py
 add_likes.py
+.env
 venv/
 .idea/
 __pycache__/

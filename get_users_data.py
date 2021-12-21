@@ -1,12 +1,12 @@
 import requests
 from calculate_age import calculate_age
 from pprint import pprint
-
+from settings.settings import USERS_TOKEN
 
 
 class ApiVk:
 
-    def __init__(self, id=None, token=''):
+    def __init__(self, id=None, token=USERS_TOKEN):
         self.id = id,
         self.token = token
 

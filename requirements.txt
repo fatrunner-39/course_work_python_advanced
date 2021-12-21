@@ -3,6 +3,7 @@ charset-normalizer==2.0.9
 greenlet==1.1.2
 idna==3.3
 psycopg2==2.9.2
+python-dotenv==0.19.2
 requests==2.26.0
 SQLAlchemy==1.4.27
 urllib3==1.26.7

@@ -2,12 +2,14 @@ import requests
 import json
 from pprint import pprint
 import os
+from settings.settings import USERS_TOKEN
 
-TOKEN = ''
+
+TOKEN = USERS_TOKEN
 
 class UserVk:
     def __init__(self, id=None,
-                 token='',
+                 token=USERS_TOKEN,
                  offset=0):
         self.id = id,
         self.token = token,

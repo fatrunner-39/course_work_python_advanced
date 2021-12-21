@@ -5,12 +5,14 @@ from get_user_photos import top_three_photos
 from create_database import get_user_id, get_result, get_photo, get_result_photo, get_all_users, \
     get_user_result, get_all_domains, get_exist_pairs
 
+from settings.settings import GROUPS_TOKEN
+
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
 import random
 
-token = ''
+token = GROUPS_TOKEN
 
 vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)

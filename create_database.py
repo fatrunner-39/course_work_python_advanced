@@ -2,9 +2,11 @@ import sqlalchemy as sq
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 
+from settings.settings import db_settings
+
 Base = declarative_base()
 
-engine = sq.create_engine('postgresql+psycopg2://vkinder:1234@localhost:5432/vkinder')
+engine = sq.create_engine(db_settings.create_db())
 Session = sessionmaker(bind=engine)
 
 class User(Base):

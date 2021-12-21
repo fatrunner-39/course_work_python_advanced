@@ -1,9 +1,10 @@
 import requests
 from get_users_data import ApiVk
 from pprint import pprint
+from settings.settings import USERS_TOKEN
 
 
-TOKEN = ''
+TOKEN = USERS_TOKEN
 
 
 
@@ -11,7 +12,7 @@ class VkFinder:
 
     def __init__(self,
                  hometown, sex, age_from, age_to,
-                 token=''):
+                 token=USERS_TOKEN):
         self.token = token,
         self.hometown = hometown,
         if sex == 1:

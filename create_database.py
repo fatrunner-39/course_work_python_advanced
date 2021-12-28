@@ -101,20 +101,3 @@ def get_exist_pairs():
 
 if __name__ == '__main__':
     session = Session()
-    # init scheme
-    # Base.metadata.create_all(engine)
-    # get_user_id()
-    # get_result('', '')
-    # get_photo('')
-    # get_result_photo('', '')
-    # print(get_all_users())
-    # print(show_all_results(''))
-    # print(get_photos(''))
-    # print(get_user_result('', ''))
-    # print(get_all_domains())
-    # domain = '
-    # if (domain,) in get_all_domains():
-    #     (get_user_result('', domain))
-    # print(len(get_exist_pairs()))
-    # if ('', '') in get_exist_pairs():
-    #     print("Совпадение")

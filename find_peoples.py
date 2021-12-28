@@ -48,12 +48,9 @@ class VkFinder:
                 user_ids['domain'] = 'https://vk.com/' + user['domain']
                 users_info.append(user_ids)
         return users_info
-        # return  res.json()['response']['items']
 
 if __name__ == '__main__':
-    # api_vk = ApiVk('')
     api_vk = ApiVk('')
-    # api_vk = ApiVk("")
     data = api_vk.get_users_data()
     vkfinder = VkFinder(data['city'], data['sex'], 32, 32)
     pprint(vkfinder.get_users())
